@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "build": "npx sequelize db:migrate"
+    "build": "npx sequelize db:migrate",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
