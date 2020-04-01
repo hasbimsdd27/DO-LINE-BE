@@ -74,7 +74,7 @@ exports.register = async (req, res) => {
           user_name: userData2.name,
           user_email: userData2.email
         },
-        process.env.SECRET_KEY
+        process.env.PORT
       );
 
       res.status(201).send({
