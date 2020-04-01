@@ -15,15 +15,15 @@ exports.login = async (req, res) => {
       }
     });
     if (!user) {
-      console.log(user);
+      throw new err();
     } else {
       let verifikasi = bcrypt.compareSync(password, user.password);
       if (!verifikasi) {
-        console.log(verifikasi);
+        throw new err();
       } else {
         const token = jwt.sign(
           { user_id: user.id, user_name: user.name, user_email: user.email },
-          process.env.PORT
+          process.env.SECRET_KEY
         );
         res.status(200).send({
           message: "login success",
@@ -32,8 +32,7 @@ exports.login = async (req, res) => {
       }
     }
   } catch (err) {
-    // res.status(401).send({ message: "invalid username or password" });
-    console.log(err);
+    res.status(401).send({ message: "invalid username or password" });
   }
 };
 
@@ -74,7 +73,7 @@ exports.register = async (req, res) => {
           user_name: userData2.name,
           user_email: userData2.email
         },
-        process.env.PORT
+        process.env.SECRET_KEY
       );
 
       res.status(201).send({
