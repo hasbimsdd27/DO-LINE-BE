@@ -23,7 +23,7 @@ exports.login = async (req, res) => {
       } else {
         const token = jwt.sign(
           { user_id: user.id, user_name: user.name, user_email: user.email },
-          process.env.SECRET_KEY
+          process.env.PORT
         );
         res.status(200).send({
           message: "login success",
