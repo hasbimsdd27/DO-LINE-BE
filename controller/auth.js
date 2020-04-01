@@ -32,7 +32,8 @@ exports.login = async (req, res) => {
       }
     }
   } catch (err) {
-    res.status(401).send({ message: "invalid username or password" });
+    // res.status(401).send({ message: "invalid username or password" });
+    console.log(err);
   }
 };
 
