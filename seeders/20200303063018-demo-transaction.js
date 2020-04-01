@@ -12,6 +12,7 @@ module.exports = {
           destination: 2,
           seats_order: 3,
           route_id: 1,
+          status: "Paid",
           transaction_code: "DO-Line-" + "aabbccddeeffgg1234",
           departure_date: "2020-03-03",
           createdAt: new Date(),

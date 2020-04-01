@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "kwmjsovzdjrrmq",
-    "password": "83c614b5937ab8f4bade3a8a16c8ea9a97d2022385e31e97b98cfe175cfcbed3",
-    "database": "d6kh2lt67ea167",
-    "host": "ec2-34-200-101-236.compute-1.amazonaws.com",
+    "username": "postgres",
+    "password": "user1234",
+    "database": "db_do_line",
+    "host": "localhost",
     "dialect": "postgres",
     "operatorsAliases": false
   },
