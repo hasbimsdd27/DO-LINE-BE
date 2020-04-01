@@ -14,13 +14,12 @@ exports.login = async (req, res) => {
         email
       }
     });
-    console.log(user);
     if (!user) {
-      throw new err();
+      console.log(user);
     } else {
       let verifikasi = bcrypt.compareSync(password, user.password);
       if (!verifikasi) {
-        throw new err();
+        console.log(verifikasi);
       } else {
         const token = jwt.sign(
           { user_id: user.id, user_name: user.name, user_email: user.email },
